@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		perror("setvbuf(fpout)");
 		return 5;
 	}
-	while ( n= fread(fbuf, sizeof(char), BUFFER_SIZE, fpin ) > 0) //read file. return number of char. if len > 0, it means read something
+	while ((n = fread(fbuf, sizeof(char), BUFFER_SIZE, fpin ))> 0) //read file. return number of char. if len > 0, it means read something
 		fwrite (fbuf, sizeof(char), n, fpout);
 
 	fclose(fpin);
