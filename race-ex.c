@@ -18,5 +18,5 @@ int main(int argc, char *argv[])
 	while((n=read(fd1, &buf,1)) != 0)
 		write(fd2, &buf, 1);
 	close(fd1);
-	clsoe(fd2);
+	close(fd2);
 }
